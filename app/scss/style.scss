@@ -1,0 +1,220 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+
+.header {
+  z-index: 30;
+}
+
+.menu {
+  padding: 52px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend %gilroy-semibold;
+  font-size: 18px;
+  line-height: 1;
+  &__list {
+    display: flex;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 110px;
+    }
+  }
+  &__link {
+  }
+  &__login {
+    padding: 10px 30px 13px;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 30px;
+  }
+}
+
+.intro {
+  text-align: right;
+  @extend %gilroy-semibold;
+  &__box {
+    position: absolute;
+    width: 100%;
+  }
+  &__slider {
+    margin-top: -151px;
+    .slick-dots {
+      position: absolute;
+      z-index: 9;
+      top: 26.6%;
+      left: -80px;
+      right: 0;
+      max-width: 1630px;
+      padding: 0px 30px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      font-size: 0;
+      align-items: flex-start;
+      li {
+        position: relative;
+        &:not(:last-child) {
+          margin-bottom: 34px;
+        }
+        &:first-child,
+        &:last-child {
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 164px;
+            width: 2px;
+            background-color: #fff;
+          }
+        }
+        &:first-child {
+          padding-top: 198px;
+          &::before {
+            top: 0;
+          }
+        }
+        &:last-child {
+          padding-bottom: 198px;
+          &::before {
+            bottom: 0;
+          }
+        }
+        &.slick-active {
+          button {
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              top:  -10px;
+              left:  -10px;
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              background: linear-gradient(
+                180deg,
+                rgba(93, 146, 177, 0.6) -110%,
+                rgba(93, 221, 193, 0.6) 148.75%
+              );
+              box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+      }
+      button {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
+  }
+  &__slider-item {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(
+        270.2deg,
+        rgba(0, 0, 0, 0.42) 6.95%,
+        rgba(0, 0, 0, 0) 99.82%
+      );
+    }
+  }
+  &__inner {
+    color: #fff;
+    position: relative;
+    z-index: 9;
+  }
+  &__suptitle {
+    margin: 0 0 26px auto;
+    max-width: 936px;
+    @extend %gilroy-bold;
+    font-size: 60px;
+    line-height: 1.2;
+    span {
+      background: linear-gradient(180deg, #518eaa 0%, #a3fae9 93.23%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__title {
+    max-width: 560px;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0 0 37px auto;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  &__link {
+    @extend %link-btn;
+    box-shadow: 0px 0px 30px #ffffff;
+    margin: 0 0 136px auto;
+  }
+  &__benefits {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-gap: 43px 65px;
+    // grid-auto-rows: 65px;
+    justify-content: end;
+    justify-items: start;
+    margin-left: auto;
+  }
+  &__item {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 42px;
+      height: 42px;
+      border: 1px solid #7ec3cb;
+      border-radius: 50%;
+      filter: drop-shadow(0px 0px 20px #ffffff);
+    }
+    p {
+      padding-left: 50px;
+      line-height: 1.2;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 11px;
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #59c3b9 87.5%,
+          rgba(146, 211, 219, 0) 100%
+        );
+        filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.67));
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 17px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.85);
+      }
+    }
+  }
+}
+
+@import "media";

@@ -1,0 +1,36 @@
+$default: rgba(8, 10, 12, 0.8);
+$title: rgba(8, 10, 12, 0.9);
+
+%gilroy-regular {
+  font-family: "gilroy-regular";
+}
+
+%gilroy-medium {
+  font-family: "gilroy-medium";
+}
+
+%gilroy-semibold {
+  font-family: "gilroy-semibold";
+}
+
+%gilroy-bold {
+  font-family: "gilroy-bold";
+}
+
+%factos-outline {
+  font-family: "factos-outline";
+}
+
+%link-btn {
+  width: 275px;
+  height: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(93.97deg, #4e7ca5 -13.72%, #5ee8c3 107.04%);
+  border-radius: 30px;
+  @extend %gilroy-semibold;
+  font-size: 18px;
+  line-height: 1.1;
+  color: #fff;
+}
