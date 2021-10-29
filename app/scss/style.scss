@@ -4,6 +4,8 @@
 @import "libs";
 @import "global";
 
+//----------- header -----------
+
 .header {
   z-index: 30;
 }
@@ -35,11 +37,13 @@
   }
 }
 
+//----------- intro -----------
+
 .intro {
   text-align: right;
   @extend %gilroy-semibold;
   &__box {
-    position: absolute;
+    // position: absolute;
     width: 100%;
   }
   &__slider {
@@ -48,7 +52,7 @@
       position: absolute;
       z-index: 9;
       top: 26.6%;
-      left: -80px;
+      left: 0;
       right: 0;
       max-width: 1630px;
       padding: 0px 30px;
@@ -92,8 +96,8 @@
             &::after {
               content: "";
               position: absolute;
-              top:  -10px;
-              left:  -10px;
+              top: -10px;
+              left: -10px;
               width: 35px;
               height: 35px;
               border-radius: 50%;
@@ -137,7 +141,10 @@
   }
   &__inner {
     color: #fff;
-    position: relative;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
     z-index: 9;
   }
   &__suptitle {
@@ -168,7 +175,6 @@
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-gap: 43px 65px;
-    // grid-auto-rows: 65px;
     justify-content: end;
     justify-items: start;
     margin-left: auto;
@@ -213,6 +219,75 @@
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.85);
       }
+    }
+  }
+}
+
+//----------- about -----------
+
+.about {
+  &__benefits {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 37px 0 164px;
+    border-radius: 90px;
+    margin-top: -138px;
+    position: relative;
+    background-color: #fff;
+  }
+  &__item {
+    display: grid;
+    grid-row-gap: 33px;
+    justify-items: center;
+    &:nth-child(even) {
+      p {
+        order: -1;
+      }
+    }
+    p {
+      @extend %gilroy-semibold;
+      max-width: 206px;
+      font-size: 18px;
+      line-height: 1.1;
+      text-align: center;
+      color: $title;
+    }
+  }
+  &__number {
+    @extend %faktos-outline;
+    font-size: 72px;
+    line-height: 0.8;
+    color: #579a8d;
+  }
+  &__story {
+    background-color: #fafbfd;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    padding: 67px 85px;
+    p {
+      margin-bottom: 25px;
+      max-width: 728px;
+    }
+    background-image: url('../images/content/about-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 85% center;
+  }
+  &__suptitle {
+    @extend %gilroy-bold;
+    font-size: 24px;
+    line-height: 1.2;
+    color: rgba(148, 229, 221, 0.9);
+    margin-bottom: 7px;
+  }
+  &__title {
+    @extend %title;
+    max-width: 580px;
+    margin-bottom: 16px;
+  }
+  &__link{
+    @extend %link-btn;
+    svg{
+      margin: 1px 0 0 15px;
     }
   }
 }

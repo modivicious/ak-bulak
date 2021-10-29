@@ -17,8 +17,8 @@ $title: rgba(8, 10, 12, 0.9);
   font-family: "gilroy-bold";
 }
 
-%factos-outline {
-  font-family: "factos-outline";
+%faktos-outline {
+  font-family: "faktos-outline";
 }
 
 %link-btn {
@@ -33,4 +33,11 @@ $title: rgba(8, 10, 12, 0.9);
   font-size: 18px;
   line-height: 1.1;
   color: #fff;
+}
+
+%title {
+  @extend %gilroy-bold;
+  font-size: 48px;
+  line-height: 1.2;
+  color: $title;
 }
