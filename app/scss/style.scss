@@ -229,7 +229,7 @@
   &__benefits {
     display: flex;
     justify-content: space-evenly;
-    padding: 37px 0 164px;
+    padding: 37px 0 191px;
     border-radius: 90px;
     margin-top: -138px;
     position: relative;
@@ -264,13 +264,14 @@
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.2);
     border-radius: 50px;
     padding: 67px 85px;
-    p {
-      margin-bottom: 25px;
-      max-width: 728px;
-    }
-    background-image: url('../images/content/about-bg.jpg');
     background-repeat: no-repeat;
     background-position: 85% center;
+    position: relative;
+    z-index: 6;
+    p {
+      margin-bottom: 29px;
+      max-width: 728px;
+    }
   }
   &__suptitle {
     @extend %gilroy-bold;
@@ -284,11 +285,73 @@
     max-width: 580px;
     margin-bottom: 16px;
   }
+  &__link {
+    @extend %link-btn;
+  }
+}
+
+//----------- programs -----------
+
+.programs {
+  margin-top: -70px;
+  padding: 235px 0 152px;
+  background-image: url("../images/content/programs-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      130.58deg,
+      rgba(255, 255, 255, 0.85) 35.26%,
+      rgba(255, 255, 255, 0.85) 111.65%
+    );
+    z-index: 2;
+  }
+  &__inner {
+    position: relative;
+    z-index: 3;
+  }
+  &__title {
+    @extend %title;
+    text-align: center;
+    margin-bottom: 63px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.38);
+    overflow: hidden;
+    p {
+      max-width: 423px;
+      margin-bottom: 28px;
+    }
+  }
+  &__img{
+    object-fit: cover;
+    height: 429px;
+  }
+  &__content {
+    padding: 28px 20px 29px;
+  }
+  &__name {
+    @extend %gilroy-semibold;
+    line-height: 1.2;
+    margin-bottom: 28px;
+  }
   &__link{
     @extend %link-btn;
-    svg{
-      margin: 1px 0 0 15px;
-    }
   }
 }
 

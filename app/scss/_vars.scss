@@ -33,6 +33,9 @@ $title: rgba(8, 10, 12, 0.9);
   font-size: 18px;
   line-height: 1.1;
   color: #fff;
+  svg {
+    margin: 1px 0 0 15px;
+  }
 }
 
 %title {
