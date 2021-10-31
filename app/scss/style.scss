@@ -353,7 +353,9 @@
 //----------- tracks -----------
 
 .tracks {
-  padding: 152px 0 200px;
+  padding-top: 152px;
+  position: relative;
+  z-index: 7;
   &__title {
     @extend %title;
     text-align: center;
@@ -389,10 +391,22 @@
       transform: translateY(-13px) scale(0.85);
       transition: all 0.7s;
     }
+    .tracks__info {
+      display: none;
+    }
+    .tracks__more {
+      display: block;
+    }
   }
   .slick-slide.slick-current {
     .tracks__img {
       transform: scale(1);
+    }
+    .tracks__more {
+      display: none;
+    }
+    .tracks__info {
+      display: block;
     }
   }
   .slick-arrow {
@@ -462,6 +476,153 @@
       left: 0;
       background-image: url("../images/icons/star.svg");
     }
+  }
+}
+
+//----------- rooms -----------
+
+.rooms {
+  padding: 240px 0 152px;
+  margin-top: -49px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      150.87deg,
+      #ffffff -0.49%,
+      rgba(255, 255, 255, 0.83) 60.74%
+    );
+    background-position: top right;
+  }
+  &__inner {
+    position: relative;
+  }
+  &__title {
+    @extend %title;
+    text-align: center;
+    margin-bottom: 92px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-gap: 3px;
+    li {
+      overflow: hidden;
+      border-radius: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: #fff;
+    }
+  }
+  &__info {
+    grid-row: 1/3;
+    display: flex;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        171.15deg,
+        #8ebcda 2.63%,
+        rgba(190, 220, 240, 0.69) 98.51%
+      );
+      z-index: 0;
+    }
+  }
+  &__item {
+    height: 648px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.35) 100%
+      );
+      z-index: 0;
+    }
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    @extend %gilroy-bold;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+  }
+  &__name {
+    display: block;
+  }
+  &__more {
+    @extend %gilroy-regular;
+    text-transform: lowercase;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-right: 60px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 50px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  &__info-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 124px;
+    position: relative;
+    text-align: center;
+    p {
+      max-width: 579px;
+    }
+  }
+  &__info-title {
+    @extend %title;
+    color: $default;
+  }
+  &__info-box {
+    span {
+      display: block;
+    }
+  }
+  &__info-name {
+    @extend %gilroy-semibold;
+    margin-bottom: 10px;
+  }
+  &__info-price {
+    @extend %title;
+    color: $default;
+    margin-bottom: 8px;
+  }
+  &__link-book {
+    @extend %link-btn;
   }
 }
 

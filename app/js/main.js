@@ -10,9 +10,6 @@ $(function () {
     "init",
     function (event, slick, currentSlide, nextSlide) {
       $status.text("0" + (slick.currentSlide + 1) + "/" + slick.slideCount);
-      $(".slick-slide .tracks__info").addClass("visually-hidden");
-      $(".slick-current .tracks__info").removeClass("visually-hidden");
-      $(".slick-current .tracks__more").css("display", "none");
     }
   );
   $(".tracks__slider").slick({
@@ -32,10 +29,6 @@ $(function () {
       if (currentSlide + 1 < 10)
         $status.text("0" + (slick.currentSlide + 1) + "/" + slick.slideCount);
       else $status.text(slick.currentSlide + 1 + "/" + slick.slideCount);
-      $(".slick-slide .tracks__info").addClass("visually-hidden");
-      $(".slick-slide .tracks__more").css("display", "block");
-      $(".slick-current .tracks__info").removeClass("visually-hidden");
-      $(".slick-current .tracks__more").css("display", "none");
     }
   );
   $(".slick-slide").on("click", function () {
