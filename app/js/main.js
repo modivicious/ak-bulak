@@ -35,4 +35,10 @@ $(function () {
     const index = $(this).attr("data-slick-index");
     $(".tracks__slider").slick("slickGoTo", index);
   });
+  $(".reviews__slider").slick({
+    arrows: false,
+    dots: true,
+    fade: true,
+    speed: 500,
+  });
 });
