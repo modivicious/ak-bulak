@@ -3,7 +3,11 @@ $(function () {
     arrows: false,
     dots: true,
     fade: true,
-    // autoplay: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    draggable: false,
   });
   var $status = $(".tracks__count");
   $(".tracks__slider").on(
@@ -40,5 +44,11 @@ $(function () {
     dots: true,
     fade: true,
     speed: 500,
+  });
+  VanillaTilt.init(document.querySelectorAll(".rooms__item"), {
+    max: 3,
+    glare: true,
+    "max-glare": 0.23,
+    speed: 1000,
   });
 });

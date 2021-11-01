@@ -24,16 +24,27 @@
   }
   &__item {
     &:not(:last-child) {
-      margin-right: 110px;
+      margin-right: 90px;
+    }
+    transition: all 0.3s;
+    &:hover {
+      color: rgba(#fff, 1);
+      transform: translateY(-2px);
     }
   }
   &__link {
+    padding: 5px 10px;
   }
   &__login {
-    padding: 10px 30px 13px;
+    padding: 10px 30px;
     color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.42);
     border-radius: 30px;
+    transition: all 0.3s;
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
   }
 }
 
@@ -46,17 +57,33 @@
     margin-top: -151px;
     .slick-dots {
       position: absolute;
-      z-index: 9;
+      z-index: 8;
       top: 26.6%;
       left: 0;
       right: 0;
       max-width: 1630px;
-      padding: 0px 30px;
       margin: 0 auto;
+      padding: 0px 15px;
       display: flex;
       flex-direction: column;
-      font-size: 0;
       align-items: flex-start;
+      font-size: 0;
+      button {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+      }
       li {
         position: relative;
         &:not(:last-child) {
@@ -88,15 +115,7 @@
         }
         &.slick-active {
           button {
-            position: relative;
             &::after {
-              content: "";
-              position: absolute;
-              top: -10px;
-              left: -10px;
-              width: 35px;
-              height: 35px;
-              border-radius: 50%;
               background: linear-gradient(
                 180deg,
                 rgba(93, 146, 177, 0.6) -110%,
@@ -106,12 +125,6 @@
             }
           }
         }
-      }
-      button {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #fff;
       }
     }
   }
@@ -165,6 +178,7 @@
   &__link {
     @extend %link-btn;
     box-shadow: 0px 0px 30px #ffffff;
+    filter: none;
     margin: 0 0 136px auto;
   }
   &__benefits {
@@ -333,8 +347,9 @@
     }
   }
   &__img {
-    object-fit: cover;
+    max-width: 485px;
     height: 429px;
+    object-fit: cover;
   }
   &__content {
     padding: 28px 20px 29px;
@@ -411,16 +426,18 @@
   }
   .slick-arrow {
     position: absolute;
-    top: -82px;
+    padding: 5px 10px;
+    top: -87px;
   }
   .slick-prev {
-    left: 40.7%;
+    left: 40%;
   }
   .slick-next {
-    right: 40.7%;
+    right: 40%;
   }
   &__img {
     margin-bottom: 24px;
+    max-width: 881px;
     height: 700px;
     object-fit: cover;
   }
@@ -466,8 +483,13 @@
   &__map-link {
     &::before {
       width: 20px;
-      left: 5px;
+      left: 6px;
       background-image: url("../images/icons/marker.svg");
+      transition: all 0.3s;
+    }
+    transition: all 0.3s;
+    &:hover {
+      color: #518eaa;
     }
   }
   &__difficulty {
@@ -558,6 +580,9 @@
       );
       z-index: 0;
     }
+    &:hover .rooms__link {
+      color: rgba(#fff, 1);
+    }
   }
   &__link {
     width: 100%;
@@ -569,6 +594,7 @@
     justify-content: end;
     align-items: center;
     position: relative;
+    transition: all 0.3s;
   }
   &__more {
     @extend %gilroy-regular;
@@ -666,6 +692,7 @@
       );
       border-radius: 50%;
       transition: all 0.3s;
+      will-change: transform;
       position: relative;
       &::before {
         content: "";
@@ -677,7 +704,10 @@
         height: 15px;
         background-color: #96d2d1;
         border-radius: 50%;
-        transition: all 0.3s;
+        transition: all 0.2s;
+      }
+      &:hover {
+        transform: scale(1.125);
       }
     }
     .slick-active {
@@ -741,7 +771,7 @@
 //----------- footer -----------
 
 .footer {
-  padding: 71px 0 131px;
+  padding: 71px 0;
   &__inner {
     display: flex;
     justify-content: space-around;
@@ -782,7 +812,18 @@
   }
   &__social {
     &:not(:last-child) {
-      margin-right: 50px;
+      margin-right: 30px;
+    }
+  }
+  &__social-link {
+    padding: 5px;
+    path {
+      transition: all 0.3s;
+    }
+    &:hover {
+      path {
+        fill: #5BD3BE;
+      }
     }
   }
 }
