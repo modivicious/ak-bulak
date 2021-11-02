@@ -3,7 +3,7 @@
   "short_name": "Starter",
   "icons": [
     {
-      "src": "google-touch-icon.png",
+      "src": "images/favicon/google-touch-icon.png",
       "sizes": "512x512"
     }
   ],
