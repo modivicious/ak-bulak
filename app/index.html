@@ -21,6 +21,10 @@
         <a class="logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="Логотип">
         </a>
+        <button class="menu__btn" type="button" aria-label="Меню">
+          <span></span>
+        </button>
+        <div class="menu__overlay" role="button" aria-hidden="true"></div>
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="#">О нас</a>
@@ -64,7 +68,7 @@
             <span>от 2 ночей</span>
           </h2>
           <h1 class="intro__title">Горнолыжный курорт “Ак-Булак”</h1>
-          <a class="intro__link" href="#">Забронировать номер</a>
+          <a class="intro__link link-btn" href="#">Забронировать номер</a>
           <ul class="intro__benefits">
             <li class="intro__item">
               <p>10 Разноуровневых трасс</p>
@@ -103,7 +107,7 @@
         </ul>
         <div class="about__story" style="background-image: url(images/content/about-bg.jpg)">
           <h3 class="about__suptitle">Отель Ak Bulak</h3>
-          <h2 class="about__title">О нас</h2>
+          <h2 class="about__title title">О нас</h2>
           <p>
             Отдых в Высокогорном курорт-отеле «Ak Bulak»—прекрасная возможность укрепить здоровье, восстановить
             жизненные силы,
@@ -115,7 +119,7 @@
             подавляющими
             рост, развитие различный вирусов и бактерий.
           </p>
-          <a class="about__link" href="#">Читать больше
+          <a class="about__link link-btn" href="#">Читать больше
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px"
               height="20px" viewBox="0 0 10 20" version="1.1">
               <g>
@@ -130,7 +134,7 @@
     <section class="programs" style="background-image: url(images/content/programs-bg.jpg)">
       <div class="programs__inner">
         <div class="container">
-          <h2 class="programs__title">Популярные тарифы</h2>
+          <h2 class="programs__title title">Популярные тарифы</h2>
           <ul class="programs__list">
             <li class="programs__item">
               <picture>
@@ -147,7 +151,7 @@
                   amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
                   amet.
                 </p>
-                <a class="programs__link" href="#">Узнать больше
+                <a class="programs__link link-btn" href="#">Узнать больше
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px"
                     height="20px" viewBox="0 0 10 20" version="1.1">
                     <g>
@@ -174,7 +178,7 @@
                   amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
                   amet.
                 </p>
-                <a class="programs__link" href="#">Узнать больше
+                <a class="programs__link link-btn" href="#">Узнать больше
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px"
                     height="20px" viewBox="0 0 10 20" version="1.1">
                     <g>
@@ -200,7 +204,7 @@
                   amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
                   amet.
                 </p>
-                <a class="programs__link" href="#">Узнать больше
+                <a class="programs__link link-btn" href="#">Узнать больше
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10px"
                     height="20px" viewBox="0 0 10 20" version="1.1">
                     <g>
@@ -216,7 +220,7 @@
       </div>
     </section>
     <section class="tracks">
-      <h2 class="tracks__title">Горнолыжные трассы</h2>
+      <h2 class="tracks__title title">Горнолыжные трассы</h2>
       <span class="tracks__count"></span>
       <ul class="tracks__slider">
         <li class="tracks__item">
@@ -464,7 +468,7 @@
     <section class="rooms" style="background-image: url(images/content/rooms-bg.png)">
       <div class="rooms__inner">
         <div class="container">
-          <h2 class="rooms__title">
+          <h2 class="rooms__title title">
             Номера на любой вкус
           </h2>
           <ul class="rooms__list">
@@ -483,7 +487,7 @@
                   <div class="rooms__info-price">4500 руб.</div>
                   За ночь
                 </div>
-                <a class="rooms__link-book" href="#">Забронировать номер</a>
+                <a class="rooms__link-book link-btn" href="#">Забронировать номер</a>
               </div>
             </li>
             <li class="rooms__item" style="background-image: url(images/content/rooms/2.jpg)">
@@ -516,7 +520,7 @@
     </section>
     <section class="reviews" style="background-image: url(images/content/reviews-bg.jpg)">
       <div class="reviews__inner">
-        <h2 class="reviews__title">Отзывы наших гостей</h2>
+        <h2 class="reviews__title title">Отзывы наших гостей</h2>
         <ul class="reviews__slider">
           <li class="reviews__item">
             <div class="reviews__content">
@@ -699,7 +703,9 @@
             <a class="footer__link" href="mailto:info@akbulak.ru">info@akbulak.ru</a>
           </li>
           <li>
-            Казахстан, Акбулакский край , п. Акбулак, ул. Кирова, д. 40
+            <a class="footer__link" href="#">
+              Казахстан, Акбулакский край , п. Акбулак, ул. Кирова, д. 40
+            </a>
           </li>
         </ul>
         <ul class="footer__socials">
@@ -710,7 +716,7 @@
                   d="M14.4357 25V13.5972H18.2617L18.8357 9.15195H14.4357V6.31434C14.4357 5.02775 14.7916 4.15095 16.6386 4.15095L18.9905 4.14999V0.174037C18.5838 0.121182 17.1876 0 15.5626 0C12.1694 0 9.84631 2.07121 9.84631 5.87409V9.15195H6.00879V13.5972H9.84631V25H14.4357Z"
                   fill="#080A0C" fill-opacity="0.5" />
               </svg>
-              <span class="visually-hidden">Фейсбук</span>
+              <span class="visually-hidden" lang="en">Facebook</span>
             </a>
           </li>
           <li class="footer__social">
@@ -720,7 +726,7 @@
                   d="M8.14437 21.8857C16.9892 21.8857 21.826 14.5581 21.826 8.20405C21.826 7.99594 21.8217 7.78868 21.8124 7.58257C22.7512 6.90376 23.5672 6.05667 24.211 5.09248C23.3495 5.47561 22.4221 5.73317 21.4496 5.8497C22.4423 5.25416 23.2046 4.31248 23.564 3.18991C22.635 3.74073 21.606 4.14091 20.5107 4.35705C19.6332 3.42239 18.3838 2.83789 17.0005 2.83789C14.3451 2.83789 12.1916 4.99129 12.1916 7.64578C12.1916 8.02331 12.2339 8.39024 12.3163 8.74226C8.3198 8.54117 4.77581 6.62784 2.4044 3.71823C1.99161 4.42872 1.75339 5.25431 1.75339 6.13522C1.75339 7.8033 2.60234 9.27631 3.89318 10.1377C3.10428 10.1135 2.36326 9.89693 1.71541 9.53646C1.71469 9.55667 1.71469 9.5763 1.71469 9.5978C1.71469 11.9266 3.37217 13.8711 5.57273 14.3117C5.16853 14.4216 4.74327 14.4808 4.30468 14.4808C3.99537 14.4808 3.6938 14.4504 3.40083 14.3941C4.013 16.3047 5.7883 17.695 7.89296 17.734C6.2471 19.024 4.17382 19.7924 1.92051 19.7924C1.53295 19.7924 1.14982 19.7701 0.773438 19.7257C2.90161 21.0898 5.42868 21.8858 8.14451 21.8858"
                   fill="#080A0C" fill-opacity="0.5" />
               </svg>
-              <span class="visually-hidden">Твиттер</span>
+              <span class="visually-hidden" lang="en">Twitter</span>
             </a>
           </li>
           <li class="footer__social">
@@ -736,10 +742,11 @@
                   d="M19.4996 4.70215C19.194 4.70215 18.9453 4.95087 18.9453 5.25642C18.9453 5.56198 19.194 5.8107 19.4996 5.8107C19.8053 5.8107 20.0541 5.56217 20.0541 5.25642C20.0541 4.95068 19.8053 4.70215 19.4996 4.70215Z"
                   fill="#080A0C" fill-opacity="0.5" />
               </svg>
-              <span class="visually-hidden">Инстаграм</span>
+              <span class="visually-hidden" lang="en">Instagram</span>
             </a>
           </li>
         </ul>
+
         <iframe title="Наше расположение на Гугл Картах"
           src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d280748.76198702335!2d77.30263842420689!3d43.23659784660725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x3883c9f7929a8fad%3A0x9adcdc3ed5e5d66a!2z0KLQsNC70LPQsNGA0YHQutC40Lkg0YDQsNC50L7QvSwg0JrQsNC30LDRhdGB0YLQsNC9!3m2!1d43.1571759!2d77.2864879!5e0!3m2!1sru!2sru!4v1635705816310!5m2!1sru!2sru"
           width="600" height="425" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

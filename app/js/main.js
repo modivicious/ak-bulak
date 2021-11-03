@@ -51,4 +51,41 @@ $(function () {
     "max-glare": 0.23,
     speed: 1000,
   });
+
+  function toggleMenu() {
+    $(".menu__list").toggleClass("menu__list--active");
+    $(".menu__overlay").toggleClass("menu__overlay--active");
+    $(".menu__btn").toggleClass("menu__btn--active");
+    $(".menu__login").toggleClass("menu__login--active");
+    $("body").toggleClass("hide-overflow");
+  }
+
+  $(".menu__btn").on("click", () => toggleMenu());
+  $(".menu__overlay").on("click", () => toggleMenu());
+
+  var lastScroll = 0;
+  const defaultOffset = 1000;
+  const header = document.querySelector(".header");
+  const menuBtn = document.querySelector(".menu__btn");
+
+  const scrollPosition = () =>
+    window.pageYOffset || document.documentElement.scrollTop;
+  const screenWidth = window.screen.width;
+  const screenHeight = window.screen.height;
+
+  window.addEventListener("scroll", () => {
+    if (screenWidth < 1366) {
+      if (scrollPosition() > screenHeight)
+        header.classList.add("header--fixed");
+      else header.classList.remove("header--fixed");
+
+      if (scrollPosition() > lastScroll || scrollPosition() < screenHeight)
+        //scroll down
+        header.classList.remove("header--pinned");
+      else if (scrollPosition() < lastScroll)
+        //scroll up
+        header.classList.add("header--pinned");
+    }
+    lastScroll = scrollPosition();
+  });
 });

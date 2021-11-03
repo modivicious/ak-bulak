@@ -29,10 +29,41 @@ body {
   margin: 0 auto;
 }
 
+.link-btn {
+  width: 275px;
+  height: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(93.97deg, #4e7ca5 -13.72%, #5ee8c3 107.04%);
+  border-radius: 30px;
+  @extend %gilroy-semibold;
+  font-size: 18px;
+  line-height: 1.1;
+  color: #fff;
+  transition: all 0.3s;
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.42));
+  will-change: transform;
+  svg {
+    margin: 1px 0 0 15px;
+  }
+  &:hover {
+    transform: scale(1.04);
+  }
+}
+
+.title {
+  @extend %title;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.hide-overflow {
+  overflow: hidden;
 }

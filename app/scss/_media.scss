@@ -1,4 +1,120 @@
-// @media (max-height: 1000px) {
-//   .intro__inner{
-//   }
-// }
+@media (max-height: 1024px) {
+  .intro {
+    &__inner {
+      top: 150px;
+    }
+    &__link {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media (max-height: 864px) {
+  .intro {
+    &__inner {
+      top: 125px;
+    }
+    &__suptitle {
+      font-size: 48px;
+    }
+    &__link {
+      margin-bottom: 60px;
+    }
+    &__item {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .menu {
+    position: relative;
+    overflow: hidden;
+    padding: 25px 0;
+    &__btn {
+      display: flex;
+      &.menu__btn--active {
+        span {
+          transform: scale(0);
+        }
+        &::before {
+          top: 48%;
+          transform: rotate(-45deg);
+        }
+        &::after {
+          top: 48%;
+          transform: rotate(45deg);
+        }
+      }
+    }
+    &__list {
+      width: 320px;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding-top: 110px;
+      height: 100vh;
+      background-color: #4e7ca5;
+      transform: translateX(200%);
+      transition: all 0.3s;
+      &.menu__list--active {
+        transform: translateX(0);
+      }
+    }
+    &__item {
+      &:not(:last-child) {
+        margin: 0 0 10px 0;
+      }
+    }
+    &__link {
+      padding: 10px 0 10px 25px;
+      font-size: 24px;
+    }
+    &__login {
+      position: fixed;
+      font-size: 24px;
+      right: 182px;
+      transform: translateX(370%);
+      &.menu__login--active {
+        transform: translateX(0);
+      }
+    }
+  }
+  .about {
+    &__benefits {
+      padding: 37px 20px 191px;
+    }
+  }
+  .programs {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      row-gap: 60px;
+    }
+  }
+  .rooms {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+    &__info-inner{
+      padding: 0 15px;
+    }
+  }
+  .reviews {
+    &__content {
+      padding: 126px 60px;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 60px;
+    }
+    &__author {
+      position: unset;
+    }
+  }
+  .footer{
+    
+  }
+}
