@@ -15,7 +15,7 @@
     top: -100%;
     left: 0;
     right: 0;
-    background: #4e7ca5;
+    background-color: #4e7ca5;
     & + main {
       padding-top: 97px;
     }
@@ -71,7 +71,8 @@
     width: 100%;
     visibility: hidden;
     opacity: 0;
-    background-color: rgba(45, 45, 45, 0.65);
+    background-color: rgba(45, 45, 45, 0.45);
+    backdrop-filter: blur(4px);
     z-index: 140;
     transition: 0.25s ease-in;
     &.menu__overlay--active {
@@ -117,10 +118,12 @@
   text-align: right;
   @extend %gilroy-semibold;
   &__slider {
-    margin-top: -151px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     .slick-dots {
       position: absolute;
-      z-index: 8;
       top: 26.6%;
       left: 0;
       right: 0;
@@ -137,6 +140,7 @@
         border-radius: 50%;
         background-color: #fff;
         position: relative;
+        z-index: 13;
         &::after {
           content: "";
           position: absolute;
@@ -191,7 +195,7 @@
       }
     }
   }
-  &__slider-item {
+  &__slide {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -213,11 +217,15 @@
   }
   &__inner {
     color: #fff;
-    position: absolute;
-    top: 250px;
-    left: 0;
-    right: 0;
+    position: relative;
     z-index: 9;
+    min-height: calc(100vh - 151px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__content {
+    padding-bottom: 193px;
   }
   &__suptitle {
     margin: 0 0 26px auto;
@@ -302,7 +310,7 @@
     justify-content: space-evenly;
     padding: 37px 0 191px;
     border-radius: 90px;
-    margin-top: -138px;
+    margin-top: -127px;
     position: relative;
     background-color: #fff;
   }
@@ -402,11 +410,17 @@
       margin-bottom: 28px;
     }
   }
+  &__img-box {
+    overflow: hidden;
+  }
   &__img {
     max-width: 485px;
-    width: 100%;
     height: 429px;
     object-fit: cover;
+    transition: all 0.42s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__content {
     padding: 28px 20px 29px;
@@ -415,6 +429,7 @@
     @extend %gilroy-semibold;
     line-height: 1.2;
     color: $title;
+    font-size: inherit;
     margin-bottom: 28px;
   }
 }
@@ -599,6 +614,7 @@
   &__info {
     grid-row: 1/3;
     display: flex;
+    justify-content: center;
     position: relative;
     &::before {
       content: "";
@@ -724,7 +740,9 @@
     display: flex;
     justify-content: center;
     li {
-      margin-right: 40px;
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
     }
     button {
       font-size: 0;

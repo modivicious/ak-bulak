@@ -53,36 +53,38 @@
   <main class="main">
     <section class="intro">
       <ul class="intro__slider">
-        <li class="intro__slider-item" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
+        <li class="intro__slide" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
         </li>
-        <li class="intro__slider-item" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
+        <li class="intro__slide" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
         </li>
-        <li class="intro__slider-item" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
+        <li class="intro__slide" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
         </li>
       </ul>
       </div>
-      <div class="intro__inner">
-        <div class="container">
-          <h2 class="intro__suptitle">
-            Получи бесплатный ски-пасс при бронировании
-            <span>от 2 ночей</span>
-          </h2>
-          <h1 class="intro__title">Горнолыжный курорт “Ак-Булак”</h1>
-          <a class="intro__link link-btn" href="#">Забронировать номер</a>
-          <ul class="intro__benefits">
-            <li class="intro__item">
-              <p>10 Разноуровневых трасс</p>
-            </li>
-            <li class="intro__item">
-              <p>Spa центр и бассейн</p>
-            </li>
-            <li class="intro__item">
-              <p>4 Новых ресторана</p>
-            </li>
-            <li class="intro__item">
-              <p>3 Канатные дорожки</p>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="intro__inner">
+          <div class="intro__content">
+            <h2 class="intro__suptitle">
+              Получи бесплатный ски-пасс при бронировании
+              <span>от 2 ночей</span>
+            </h2>
+            <h1 class="intro__title">Горнолыжный курорт “Ак-Булак”</h1>
+            <a class="intro__link link-btn" href="#">Забронировать номер</a>
+            <ul class="intro__benefits">
+              <li class="intro__item">
+                <p>10 Разноуровневых трасс</p>
+              </li>
+              <li class="intro__item">
+                <p>Spa центр и бассейн</p>
+              </li>
+              <li class="intro__item">
+                <p>4 Новых ресторана</p>
+              </li>
+              <li class="intro__item">
+                <p>3 Канатные дорожки</p>
+              </li>
+            </ul>
+          </div>
         </div>
     </section>
     <section class="about">
@@ -106,7 +108,7 @@
           </li>
         </ul>
         <div class="about__story" style="background-image: url(images/content/about-bg.jpg)">
-          <h3 class="about__suptitle">Отель Ak Bulak</h3>
+          <span class="about__suptitle">Отель Ak Bulak</span>
           <h2 class="about__title title">О нас</h2>
           <p>
             Отдых в Высокогорном курорт-отеле «Ak Bulak»—прекрасная возможность укрепить здоровье, восстановить
@@ -137,12 +139,14 @@
           <h2 class="programs__title title">Популярные тарифы</h2>
           <ul class="programs__list">
             <li class="programs__item">
-              <picture>
-                <source srcset="images/content/programs/1.webp" type="image/webp">
-                <img class="programs__img" src="images/content/programs/1.jpg" alt="Фрирайдер эффектно съезжает вниз">
-              </picture>
+              <div class="programs__img-box">
+                <picture>
+                  <source srcset="images/content/programs/1.webp" type="image/webp">
+                  <img class="programs__img" src="images/content/programs/1.jpg" alt="Фрирайдер эффектно съезжает вниз">
+                </picture>
+              </div>
               <div class="programs__content">
-                <h4 class="programs__name">Фрирайд для экстрималов</h4>
+                <h3 class="programs__name">Фрирайд для экстрималов</h3>
                 <p>
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
                   enim velit
@@ -163,13 +167,15 @@
               </div>
             </li>
             <li class="programs__item">
-              <picture>
-                <source srcset="images/content/programs/2.webp" type="image/webp">
-                <img class="programs__img" src="images/content/programs/2.jpg"
-                  alt="Улыбающийся ребенок с семьей на заднем плане катаются на лыжах">
-              </picture>
+              <div class="programs__img-box">
+                <picture>
+                  <source srcset="images/content/programs/2.webp" type="image/webp">
+                  <img class="programs__img" src="images/content/programs/2.jpg"
+                    alt="Улыбающийся ребенок с семьей на заднем плане катаются на лыжах">
+                </picture>
+              </div>
               <div class="programs__content">
-                <h4 class="programs__name">Тариф “Отдых всей семьей”</h4>
+                <h3 class="programs__name">Тариф “Отдых всей семьей”</h3>
                 <p>
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
                   enim velit
@@ -190,12 +196,15 @@
               </div>
             </li>
             <li class="programs__item">
-              <picture>
-                <source srcset="images/content/programs/3.webp" type="image/webp">
-                <img class="programs__img" src="images/content/programs/3.jpg" alt="Друзья веселятся, прыгая на снегу">
-              </picture>
+              <div class="programs__img-box">
+                <picture>
+                  <source srcset="images/content/programs/3.webp" type="image/webp">
+                  <img class="programs__img" src="images/content/programs/3.jpg"
+                    alt="Друзья веселятся, прыгая на снегу">
+                </picture>
+              </div>
               <div class="programs__content">
-                <h4 class="programs__name">Лучший отдых с друзьями</h4>
+                <h3 class="programs__name">Лучший отдых с друзьями</h3>
                 <p>
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
                   enim velit
@@ -475,7 +484,7 @@
             <li class="rooms__info" style="background-image: url(images/content/rooms/1.jpg)">
               <div class="rooms__info-inner">
                 <h3 class="rooms__info-title">
-                  Раннее бронирование 50% скидка
+                  Раннее бронирование: 50% скидка
                 </h3>
                 <p>
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
@@ -691,19 +700,23 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <a class="footer__home-link" href="#">
+        <a class="footer__home-link" href="#" aria-label="Переход на главную страницу">
           <span>Ак Булак</span>
           <div>Горнолыжный курорт</div>
         </a>
         <ul class="footer__contacts">
           <li>
-            <a class="footer__link" href="tel:88005889020">8 800 588 90 20</a>
+            <a class="footer__link" href="tel:88005889020" aria-label="Телефон">
+              8 800 588 90 20
+            </a>
           </li>
           <li>
-            <a class="footer__link" href="mailto:info@akbulak.ru">info@akbulak.ru</a>
+            <a class="footer__link" href="mailto:info@akbulak.ru" aria-label="Электронная почта">
+              info@akbulak.ru
+            </a>
           </li>
           <li>
-            <a class="footer__link" href="#">
+            <a class="footer__link" href="#" aria-label="Адрес">
               Казахстан, Акбулакский край , п. Акбулак, ул. Кирова, д. 40
             </a>
           </li>
@@ -747,9 +760,11 @@
           </li>
         </ul>
 
-        <iframe title="Наше расположение на Гугл Картах"
-          src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d280748.76198702335!2d77.30263842420689!3d43.23659784660725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x3883c9f7929a8fad%3A0x9adcdc3ed5e5d66a!2z0KLQsNC70LPQsNGA0YHQutC40Lkg0YDQsNC50L7QvSwg0JrQsNC30LDRhdGB0YLQsNC9!3m2!1d43.1571759!2d77.2864879!5e0!3m2!1sru!2sru!4v1635705816310!5m2!1sru!2sru"
-          width="600" height="425" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="footer__map-box">
+          <iframe title="Наше расположение на Гугл Картах"
+            src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d280748.76198702335!2d77.30263842420689!3d43.23659784660725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x3883c9f7929a8fad%3A0x9adcdc3ed5e5d66a!2z0KLQsNC70LPQsNGA0YHQutC40Lkg0YDQsNC50L7QvSwg0JrQsNC30LDRhdGB0YLQsNC9!3m2!1d43.1571759!2d77.2864879!5e0!3m2!1sru!2sru!4v1635705816310!5m2!1sru!2sru"
+            width="600" height="425" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
   </footer>
