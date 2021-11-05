@@ -1,21 +1,29 @@
-// @media (max-height: 864px) {
-//   .intro {
-//     &__inner {
-//       top: 160px;
-//     }
-//     &__suptitle {
-//       font-size: 48px;
-//     }
-//     &__link {
-//       margin-bottom: 60px;
-//     }
-//     &__item {
-//       p {
-//         font-size: 18px;
-//       }
-//     }
-//   }
-// }
+@media (max-height: 960px) {
+  .intro {
+    &__slide {
+      height: 960px;
+    }
+    // &__suptitle {
+    //   font-size: 48px;
+    // }
+    // &__link {
+    //   margin-bottom: 60px;
+    // }
+    // &__item {
+    //   p {
+    //     font-size: 18px;
+    //   }
+    // }
+  }
+}
+
+@media (max-height: 800px) {
+  .intro {
+    &__slide {
+      // height: 130vh;
+    }
+  }
+}
 
 @media (max-width: 1366px) {
   .menu {
@@ -70,6 +78,11 @@
       &.menu__login--active {
         transform: translateX(0);
       }
+    }
+  }
+  .intro {
+    &__content {
+      padding-top: 30px;
     }
   }
   .about {
@@ -127,9 +140,15 @@
       }
     }
   }
+  .about {
+    &__bg {
+      display: none;
+    }
+  }
   .rooms {
     &__list {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(290px, 506px);
+      justify-content: center;
       gap: 30px;
     }
     &__info-inner {
@@ -146,11 +165,255 @@
 }
 
 @media (max-width: 864px) {
-  .reviews{
-    &__content{
-      &::before{
+  .intro {
+    &__suptitle {
+      font-size: 48px;
+    }
+    &__link {
+      margin-bottom: 60px;
+    }
+    &__item {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  .reviews {
+    &__content {
+      &::before {
         display: none;
       }
+    }
+  }
+  .tracks {
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .title {
+    font-size: 38px;
+  }
+  body {
+    font-size: 18px;
+  }
+  .menu {
+    padding: 15px 0;
+  }
+  .intro {
+    &__suptitle {
+      font-size: 38px;
+    }
+    &__link {
+      margin-bottom: 60px;
+    }
+    &__item {
+      p {
+        font-size: 14px;
+      }
+    }
+    &__benefits {
+      grid-row-gap: 10px;
+    }
+  }
+  .about {
+    &__benefits {
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 50px;
+      padding-bottom: 70px;
+    }
+    &__bg {
+      right: 0;
+    }
+  }
+  .programs {
+    padding: 150px 0 50px;
+    &__list {
+      row-gap: 30px;
+    }
+  }
+  .tracks {
+    padding-top: 50px;
+    &__count {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+    .slick-arrow {
+      top: -50px;
+    }
+    &__title {
+      margin-bottom: 45px;
+    }
+  }
+  .rooms {
+    padding: 130px 0 30px;
+    &__title {
+      margin-bottom: 45px;
+    }
+    &__info-title,
+    &__info-price {
+      font-size: 38px;
+    }
+    &__info-inner {
+      row-gap: 50px;
+      padding: 100px 15px;
+      p {
+        max-width: 420px;
+      }
+    }
+  }
+  .reviews {
+    padding: 30px 0 130px;
+    &__content {
+      padding: 65px 45px;
+    }
+  }
+  .footer {
+    padding-bottom: 30px;
+    &__inner {
+      row-gap: 50px;
+    }
+    &__home-link {
+      font-size: 38px;
+      div {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .intro {
+    &__benefits {
+      grid-template-columns: unset;
+    }
+    &__title {
+      color: #fff;
+    }
+  }
+  .about {
+    &__benefits {
+      grid-auto-flow: row;
+    }
+    &__item {
+      &:nth-child(even) p {
+        order: unset;
+      }
+    }
+    &__story {
+      padding: 47px 20px;
+    }
+  }
+  .rooms {
+    &__item {
+      height: 560px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+  }
+  .link-btn {
+    width: 230px;
+    height: 57px;
+    font-size: 16px;
+  }
+  .intro {
+    &__suptitle {
+      font-size: 32px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__link {
+      margin-bottom: 45px;
+    }
+  }
+  .about {
+    &__suptitle {
+      margin-bottom: 15px;
+    }
+    &__title {
+      margin-bottom: 10px;
+    }
+    &__benefits {
+      row-gap: 40px;
+    }
+  }
+  .programs {
+    padding: 120px 0 30px;
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+  .tracks {
+    padding-top: 50px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__count {
+      font-size: 32px;
+    }
+    .slick-arrow {
+      top: -46px;
+    }
+    .slick-prev {
+      transform: translateX(-170%);
+    }
+    .slick-next {
+      transform: translateX(170%);
+    }
+  }
+  .rooms {
+    padding: 120px 0 50px;
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__info-inner {
+      padding: 82px 15px;
+    }
+    &__info-title,
+    &__info-price {
+      font-size: 32px;
+    }
+    &__item {
+      height: 500px;
+    }
+  }
+  .reviews {
+    padding: 30px 0;
+    &__title {
+      margin-bottom: 50px;
+    }
+    .slick-slide {
+      margin-top: 0px;
+    }
+  }
+  .footer {
+    &__home-link {
+      font-size: 32px;
+      div {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    font-size: 16px;
+  }
+  .intro {
+    &__suptitle {
+      font-size: 28px;
+    }
+    &__title {
+      font-size: 18px;
     }
   }
 }
