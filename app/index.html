@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
   <title>Горнолыжный курорт "Ак Булак"</title>
+  <meta name="description" content="description">
+  <meta name="keywords" content="keywords">
+  <meta name="theme-color" content="#4e7ca5">
   <link rel="icon" href="images/favicon/favicon.svg">
   <link rel="mask-icon" href="images/favicon/apple-touch-icon.png" color="#000000">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -52,23 +55,22 @@
 
   <main class="main">
     <section class="intro">
-      <ul class="intro__slider">
-        <li class="intro__slide" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
-        </li>
-        <li class="intro__slide" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
-        </li>
-        <li class="intro__slide" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
-        </li>
-      </ul>
+      <div class="intro__slider">
+        <div class="intro__slide" style="background-image: url(images/content/intro/intro-bg-1.jpg);">
+        </div>
+        <div class="intro__slide" style="background-image: url(images/content/intro/intro-bg-2.jpg);">
+        </div>
+        <div class="intro__slide" style="background-image: url(images/content/intro/intro-bg-3.jpg);">
+        </div>
       </div>
       <div class="container">
         <div class="intro__inner">
           <div class="intro__content">
             <h2 class="intro__suptitle">
-              Получи бесплатный ски-пасс при бронировании
+              Получи бесплатный ски&#8209;пасс при&nbsp;бронировании
               <span>от 2 ночей</span>
             </h2>
-            <h1 class="intro__title">Горнолыжный курорт “Ак Булак”</h1>
+            <h1 class="intro__title">Горнолыжный курорт “Ак&nbsp;Булак”</h1>
             <a class="intro__link link-btn" href="#">Забронировать номер</a>
             <ul class="intro__benefits">
               <li class="intro__item">
@@ -86,6 +88,7 @@
             </ul>
           </div>
         </div>
+      </div>
     </section>
     <section class="about">
       <div class="wrapper">
@@ -134,11 +137,14 @@
           <h2 class="programs__title title">Популярные тарифы</h2>
           <ul class="programs__list">
             <li class="programs__item">
-              <div class="programs__img-box">
-                <picture>
-                  <source srcset="images/content/programs/1.webp" type="image/webp">
-                  <img class="programs__img" src="images/content/programs/1.jpg" alt="Фрирайдер эффектно съезжает вниз">
-                </picture>
+              <div class="img-box">
+                <a class='link-focus' href='#'>
+                  <picture>
+                    <source srcset="images/content/programs/1.webp" type="image/webp">
+                    <img class="programs__img" src="images/content/programs/1.jpg"
+                      alt="Фрирайдер эффектно съезжает вниз">
+                  </picture>
+                </a>
               </div>
               <div class="programs__content">
                 <h3 class="programs__name">Фрирайд для экстрималов</h3>
@@ -156,12 +162,14 @@
               </div>
             </li>
             <li class="programs__item">
-              <div class="programs__img-box">
-                <picture>
-                  <source srcset="images/content/programs/2.webp" type="image/webp">
-                  <img class="programs__img" src="images/content/programs/2.jpg"
-                    alt="Улыбающийся ребенок с семьей на заднем плане катаются на лыжах">
-                </picture>
+              <div class="img-box">
+                <a class='link-focus' href='#'>
+                  <picture>
+                    <source srcset="images/content/programs/2.webp" type="image/webp">
+                    <img class="programs__img" src="images/content/programs/2.jpg"
+                      alt="Улыбающийся ребенок с семьей на заднем плане катаются на лыжах">
+                  </picture>
+                </a>
               </div>
               <div class="programs__content">
                 <h3 class="programs__name">Тариф “Отдых всей семьей”</h3>
@@ -179,12 +187,14 @@
               </div>
             </li>
             <li class="programs__item">
-              <div class="programs__img-box">
-                <picture>
-                  <source srcset="images/content/programs/3.webp" type="image/webp">
-                  <img class="programs__img" src="images/content/programs/3.jpg"
-                    alt="Друзья веселятся, прыгая на снегу">
-                </picture>
+              <div class="img-box">
+                <a class='link-focus' href='#'>
+                  <picture>
+                    <source srcset="images/content/programs/3.webp" type="image/webp">
+                    <img class="programs__img" src="images/content/programs/3.jpg"
+                      alt="Друзья веселятся, прыгая на снегу">
+                  </picture>
+                </a>
               </div>
               <div class="programs__content">
                 <h3 class="programs__name">Лучший отдых с друзьями</h3>
@@ -208,8 +218,8 @@
     <section class="tracks">
       <h2 class="tracks__title title">Горнолыжные трассы</h2>
       <span class="tracks__count"></span>
-      <ul class="tracks__slider">
-        <li class="tracks__item">
+      <div class="tracks__slider">
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
               <source srcset="images/content/tracks/1.webp" type="image/webp">
@@ -232,8 +242,8 @@
               </p>
             </div>
           </div>
-        </li>
-        <li class="tracks__item">
+        </div>
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
               <source srcset="images/content/tracks/2.webp" type="image/webp">
@@ -256,8 +266,8 @@
               </p>
             </div>
           </div>
-        </li>
-        <li class="tracks__item">
+        </div>
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
               <source srcset="images/content/tracks/3.webp" type="image/webp">
@@ -280,12 +290,12 @@
               </p>
             </div>
           </div>
-        </li>
-        <li class="tracks__item">
+        </div>
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
-              <source srcset="images/content/tracks/3.webp" type="image/webp">
-              <img class="tracks__img" src="images/content/tracks/3.jpg" alt="Человек съезжает по трассе на сноуборде">
+              <source srcset="images/content/tracks/4.webp" type="image/webp">
+              <img class="tracks__img" src="images/content/tracks/4.jpg" alt="Человек съезжает по трассе на сноуборде">
             </picture>
             <span class="tracks__more">Читать больше</span>
             <div class="tracks__info">
@@ -304,12 +314,12 @@
               </p>
             </div>
           </div>
-        </li>
-        <li class="tracks__item">
+        </div>
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
-              <source srcset="images/content/tracks/1.webp" type="image/webp">
-              <img class="tracks__img" src="images/content/tracks/1.jpg" alt="Человек съезжает по трассе на сноуборде">
+              <source srcset="images/content/tracks/5.webp" type="image/webp">
+              <img class="tracks__img" src="images/content/tracks/5.jpg" alt="Человек съезжает по трассе на сноуборде">
             </picture>
             <span class="tracks__more">Читать больше</span>
             <div class="tracks__info">
@@ -328,12 +338,12 @@
               </p>
             </div>
           </div>
-        </li>
-        <li class="tracks__item">
+        </div>
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
-              <source srcset="images/content/tracks/1.webp" type="image/webp">
-              <img class="tracks__img" src="images/content/tracks/1.jpg" alt="Человек съезжает по трассе на сноуборде">
+              <source srcset="images/content/tracks/6.webp" type="image/webp">
+              <img class="tracks__img" src="images/content/tracks/6.jpg" alt="Человек съезжает по трассе на сноуборде">
             </picture>
             <span class="tracks__more">Читать больше</span>
             <div class="tracks__info">
@@ -352,12 +362,12 @@
               </p>
             </div>
           </div>
-        </li>
-        <li class="tracks__item">
+        </div>
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
-              <source srcset="images/content/tracks/1.webp" type="image/webp">
-              <img class="tracks__img" src="images/content/tracks/1.jpg" alt="Человек съезжает по трассе на сноуборде">
+              <source srcset="images/content/tracks/7.webp" type="image/webp">
+              <img class="tracks__img" src="images/content/tracks/7.jpg" alt="Человек съезжает по трассе на сноуборде">
             </picture>
             <span class="tracks__more">Читать больше</span>
             <div class="tracks__info">
@@ -376,12 +386,12 @@
               </p>
             </div>
           </div>
-        </li>
-        <li class="tracks__item">
+        </div>
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
-              <source srcset="images/content/tracks/1.webp" type="image/webp">
-              <img class="tracks__img" src="images/content/tracks/1.jpg" alt="Человек съезжает по трассе на сноуборде">
+              <source srcset="images/content/tracks/8.webp" type="image/webp">
+              <img class="tracks__img" src="images/content/tracks/8.jpg" alt="Человек съезжает по трассе на сноуборде">
             </picture>
             <span class="tracks__more">Читать больше</span>
             <div class="tracks__info">
@@ -400,12 +410,12 @@
               </p>
             </div>
           </div>
-        </li>
-        <li class="tracks__item">
+        </div>
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
-              <source srcset="images/content/tracks/1.webp" type="image/webp">
-              <img class="tracks__img" src="images/content/tracks/1.jpg" alt="Человек съезжает по трассе на сноуборде">
+              <source srcset="images/content/tracks/9.webp" type="image/webp">
+              <img class="tracks__img" src="images/content/tracks/9.jpg" alt="Человек съезжает по трассе на сноуборде">
             </picture>
             <span class="tracks__more">Читать больше</span>
             <div class="tracks__info">
@@ -424,12 +434,12 @@
               </p>
             </div>
           </div>
-        </li>
-        <li class="tracks__item">
+        </div>
+        <div class="tracks__item">
           <div class="tracks__inner">
             <picture>
-              <source srcset="images/content/tracks/3.webp" type="image/webp">
-              <img class="tracks__img" src="images/content/tracks/3.jpg" alt="Человек съезжает по трассе на сноуборде">
+              <source srcset="images/content/tracks/10.webp" type="image/webp">
+              <img class="tracks__img" src="images/content/tracks/10.jpg" alt="Человек съезжает по трассе на сноуборде">
             </picture>
             <span class="tracks__more">Читать больше</span>
             <div class="tracks__info">
@@ -448,8 +458,8 @@
               </p>
             </div>
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
     <section class="rooms" style="background-image: url(images/content/rooms-bg.png)">
       <div class="rooms__inner">
@@ -461,7 +471,7 @@
             <li class="rooms__info" style="background-image: url(images/content/rooms/1.jpg)">
               <div class="rooms__info-inner">
                 <h3 class="rooms__info-title">
-                  Раннее бронирование: 50% скидка
+                  Раннее бронирование: 50%&nbsp;скидка
                 </h3>
                 <p>
                   Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
@@ -507,8 +517,8 @@
     <section class="reviews" style="background-image: url(images/content/reviews-bg.jpg)">
       <div class="reviews__inner">
         <h2 class="reviews__title title">Отзывы наших гостей</h2>
-        <ul class="reviews__slider">
-          <li class="reviews__item">
+        <div class="reviews__slider">
+          <div class="reviews__item">
             <div class="reviews__content">
               <p>
                 Отдых в Высокогорном курорт-отеле «Ak Bulak»—прекрасная возможность укрепить здоровье, восстановить
@@ -530,8 +540,8 @@
                 <div class="reviews__date">19 января 2020</div>
               </div>
             </div>
-          </li>
-          <li class="reviews__item">
+          </div>
+          <div class="reviews__item">
             <div class="reviews__content">
               <p>
                 Отдых в Высокогорном курорт-отеле «Ak Bulak»—прекрасная возможность укрепить здоровье, восстановить
@@ -553,8 +563,8 @@
                 <div class="reviews__date">19 января 2020</div>
               </div>
             </div>
-          </li>
-          <li class="reviews__item">
+          </div>
+          <div class="reviews__item">
             <div class="reviews__content">
               <p>
                 Отдых в Высокогорном курорт-отеле «Ak Bulak»—прекрасная возможность укрепить здоровье, восстановить
@@ -576,8 +586,8 @@
                 <div class="reviews__date">19 января 2020</div>
               </div>
             </div>
-          </li>
-          <li class="reviews__item">
+          </div>
+          <div class="reviews__item">
             <div class="reviews__content">
               <p>
                 Отдых в Высокогорном курорт-отеле «Ak Bulak»—прекрасная возможность укрепить здоровье, восстановить
@@ -599,8 +609,8 @@
                 <div class="reviews__date">19 января 2020</div>
               </div>
             </div>
-          </li>
-          <li class="reviews__item">
+          </div>
+          <div class="reviews__item">
             <div class="reviews__content">
               <p>
                 Отдых в Высокогорном курорт-отеле «Ak Bulak»—прекрасная возможность укрепить здоровье, восстановить
@@ -622,8 +632,8 @@
                 <div class="reviews__date">19 января 2020</div>
               </div>
             </div>
-          </li>
-          <li class="reviews__item">
+          </div>
+          <div class="reviews__item">
             <div class="reviews__content">
               <p>
                 Отдых в Высокогорном курорт-отеле «Ak Bulak»—прекрасная возможность укрепить здоровье, восстановить
@@ -645,8 +655,8 @@
                 <div class="reviews__date">19 января 2020</div>
               </div>
             </div>
-          </li>
-          <li class="reviews__item">
+          </div>
+          <div class="reviews__item">
             <div class="reviews__content">
               <p>
                 Отдых в Высокогорном курорт-отеле «Ak Bulak»—прекрасная возможность укрепить здоровье, восстановить
@@ -668,8 +678,8 @@
                 <div class="reviews__date">19 января 2020</div>
               </div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -679,22 +689,22 @@
       <div class="footer__inner">
         <a class="footer__home-link" href="#" aria-label="Переход на главную страницу">
           <span>Ак Булак</span>
-          <div>Горнолыжный курорт</div>
+          <div>Горнолыжный&nbsp;курорт</div>
         </a>
         <ul class="footer__contacts">
           <li>
-            <a class="footer__link" href="tel:88005889020" aria-label="Телефон">
+            <a class="footer__link footer__link--nowrap" href="tel:88005889020" aria-label="Телефон">
               8 800 588 90 20
             </a>
           </li>
           <li>
-            <a class="footer__link" href="mailto:info@akbulak.ru" aria-label="Электронная почта">
+            <a class="footer__link footer__link--nowrap" href="mailto:info@akbulak.ru" aria-label="Электронная почта">
               info@akbulak.ru
             </a>
           </li>
           <li>
             <a class="footer__link" href="#" aria-label="Адрес">
-              Казахстан, Акбулакский край , п. Акбулак, ул. Кирова, д. 40
+              Казахстан, Акбулакский&nbsp;край, п.&nbsp;Акбулак, ул.&nbsp;Кирова, д.&nbsp;40
             </a>
           </li>
         </ul>
@@ -736,11 +746,10 @@
             </a>
           </li>
         </ul>
-
         <div class="footer__map-box">
-          <iframe title="Наше расположение на Гугл Картах"
+          <iframe title="Наше расположение на карте"
             src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d280748.76198702335!2d77.30263842420689!3d43.23659784660725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x3883c9f7929a8fad%3A0x9adcdc3ed5e5d66a!2z0KLQsNC70LPQsNGA0YHQutC40Lkg0YDQsNC50L7QvSwg0JrQsNC30LDRhdGB0YLQsNC9!3m2!1d43.1571759!2d77.2864879!5e0!3m2!1sru!2sru!4v1635705816310!5m2!1sru!2sru"
-            width="600" height="425" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </div>
