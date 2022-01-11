@@ -85,6 +85,7 @@
       grid-auto-flow: row;
       grid-auto-rows: max-content;
       grid-template-columns: 1fr;
+      gap: 20px;
       padding-top: 110px;
       width: 320px;
       min-height: 100vh;
@@ -233,11 +234,18 @@
     &__bg {
       right: 0;
     }
+    &__story {
+      padding: 40px 50px;
+    }
   }
   .programs {
     padding: 150px 0 50px;
     &__list {
       row-gap: 30px;
+    }
+    &__name {
+      font-size: 20px;
+      margin-bottom: 16px;
     }
   }
   .tracks {
@@ -251,6 +259,9 @@
     }
     &__title {
       margin-bottom: 45px;
+    }
+    &__box {
+      margin-bottom: 30px;
     }
   }
   .rooms {
@@ -274,6 +285,8 @@
     padding: 30px 0 130px;
     &__content {
       padding: 65px;
+      min-height: auto;
+      gap: 47px;
     }
     &__img {
       width: 160px;
@@ -297,6 +310,9 @@
         font-size: 20px;
       }
     }
+    &__contacts {
+      font-size: 20px;
+    }
   }
 }
 
@@ -310,6 +326,9 @@
     }
   }
   .about {
+    &__wrapper {
+      padding: 0 30px;
+    }
     &__benefits {
       grid-auto-flow: row;
     }
@@ -318,13 +337,26 @@
         order: unset;
       }
     }
-    &__story {
-      padding: 47px 60px;
-    }
   }
   .rooms {
     &__item {
       height: 560px;
+    }
+  }
+  .reviews {
+    &__content {
+      padding: 50px;
+      gap: 35px;
+    }
+    &__img {
+      width: 120px;
+      height: 100px;
+    }
+    &__name {
+      font-size: 16px;
+    }
+    &__date {
+      font-size: 14px;
     }
   }
 }
@@ -337,7 +369,6 @@
     font-size: 32px;
   }
   .link-btn {
-    width: 230px;
     height: 57px;
     font-size: 16px;
   }
@@ -353,14 +384,17 @@
     }
   }
   .about {
+    &__benefits {
+      row-gap: 40px;
+    }
+    &__story {
+      padding: 30px 35px;
+    }
     &__suptitle {
-      margin-bottom: 15px;
+      font-size: 16px;
     }
     &__title {
       margin-bottom: 10px;
-    }
-    &__benefits {
-      row-gap: 40px;
     }
   }
   .programs {
@@ -393,7 +427,8 @@
       margin-bottom: 30px;
     }
     &__info-inner {
-      padding: 82px 15px;
+      padding: 45px 15px;
+      row-gap: 35px;
     }
     &__info-title,
     &__info-price {
@@ -412,19 +447,11 @@
       margin-top: 0px;
     }
   }
-  .footer {
-    &__home-link {
-      font-size: 32px;
-      div {
-        font-size: 18px;
-      }
-    }
-  }
 }
 
 @media (max-width: 380px) {
   body {
-    font-size: 16px;
+    font-size: 12px;
   }
   .intro {
     &__suptitle {
@@ -432,6 +459,22 @@
     }
     &__title {
       font-size: 18px;
+    }
+  }
+  .about {
+    &__story {
+      padding: 30px 25px;
+    }
+  }
+  .reviews {
+    &__content {
+      padding: 30px 40px;
+      gap: 25px;
+    }
+  }
+  .footer {
+    &__socials {
+      margin: 0 auto;
     }
   }
 }

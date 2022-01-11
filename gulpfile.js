@@ -5,7 +5,8 @@ const concat = require("gulp-concat");
 const autoprefixer = require("gulp-autoprefixer");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
+const webpConvert = require("gulp-webp");
+const webpDelete = require("del");
 const del = require("del");
 const { notify } = require("browser-sync");
 const browserSync = require("browser-sync").create();
@@ -34,12 +35,10 @@ function styles() {
 }
 
 function scripts() {
-  return src([
-    "node_modules/jquery/dist/jquery.js",
+  return src(["node_modules/jquery/dist/jquery.js",
     "node_modules/slick-carousel/slick/slick.js",
     "node_modules/vanilla-tilt/dist/vanilla-tilt.js",
-    "app/js/main.js",
-  ])
+    "app/js/main.js",])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js"))
@@ -61,15 +60,20 @@ function images() {
     .pipe(dest("dist/images"));
 }
 
-function webpConvert() {
-  return src("app/images/**/*.*").pipe(webp()).pipe(dest("app/images"));
+function webp() {
+  return src("app/images/**/*.*")
+    .pipe(webpConvert({ quality: 75 }))
+    .pipe(dest("app/images"));
+}
+
+function webpDel() {
+  return webpDelete("app/images/**/*.webp");
 }
 
 function build() {
-  return (
-    src(["app/**/*.html", "app/css/style.min.css", "app/js/main.min.js"]),
-    { base: "app" }.pipe(dest("dist"))
-  );
+  return src(["app/**/*.html", "app/fonts/*", "app/**/manifest.json", "app/css/style.min.css", "app/js/main.min.js"], {
+    base: "app",
+  }).pipe(dest("dist"));
 }
 
 function cleanDist() {
@@ -87,7 +91,8 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
-exports.webpConvert = webpConvert;
+exports.webp = webp;
+exports.webpDel = webpDel;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 

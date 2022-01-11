@@ -3,8 +3,8 @@ $(function () {
     arrows: false,
     dots: true,
     fade: true,
-    // autoplay: true,
-    autoplaySpeed: 7000,
+    autoplay: true,
+    autoplaySpeed: 5500,
     speed: 1000,
     pauseOnFocus: false,
     pauseOnHover: false,
@@ -71,6 +71,7 @@ $(function () {
       },
     ],
   });
+
   VanillaTilt.init(document.querySelectorAll(".rooms__item"), {
     max: 3,
     glare: true,
