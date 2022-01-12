@@ -180,7 +180,6 @@
   }
   .tracks {
     &__img {
-      width: 100%;
       height: auto;
     }
   }
@@ -336,6 +335,11 @@
       &:nth-child(even) p {
         order: unset;
       }
+    }
+  }
+  .programs {
+    &__img {
+      height: auto;
     }
   }
   .rooms {
