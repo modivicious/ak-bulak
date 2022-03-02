@@ -392,7 +392,7 @@
       row-gap: 40px;
     }
     &__story {
-      padding: 30px 35px;
+      padding: 40px 35px;
     }
     &__suptitle {
       font-size: 16px;
@@ -443,9 +443,12 @@
     }
   }
   .reviews {
-    padding: 30px 0;
+    padding: 50px 0;
     &__title {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
+    }
+    &__content{
+      padding: 40px 50px;
     }
     .slick-slide {
       margin-top: 0px;

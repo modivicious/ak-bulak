@@ -11,7 +11,7 @@ $(function () {
     draggable: false,
   });
 
-  var $status = $(".tracks__count");
+  let $status = $(".tracks__count");
   $(".tracks__slider").on(
     "init",
     function (event, slick, currentSlide, nextSlide) {
@@ -90,7 +90,7 @@ $(function () {
   $(".menu__btn").on("click", () => toggleMenu());
   $(".menu__overlay").on("click", () => toggleMenu());
 
-  var lastScroll = 0;
+  let lastScroll = 0;
   const header = document.querySelector(".header");
 
   const scrollPosition = () =>
