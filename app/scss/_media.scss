@@ -91,10 +91,10 @@
       min-height: 100vh;
       background-color: #4e7ca5;
       will-change: transform;
-      transform: translateX(200%);
+      transform: translate3d(200%, 0, 0);
       transition: all 0.3s;
       &.menu__list--active {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
       }
     }
     &__link {
@@ -105,9 +105,9 @@
       position: fixed;
       font-size: 24px;
       right: 182px;
-      transform: translateX(370%);
+      transform: translate3d(370%, 0, 0);
       &.menu__login--active {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
       }
     }
   }
@@ -447,7 +447,7 @@
     &__title {
       margin-bottom: 30px;
     }
-    &__content{
+    &__content {
       padding: 40px 50px;
     }
     .slick-slide {
